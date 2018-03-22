@@ -11,10 +11,10 @@ A forkable demo repo for [xcomponent](https://github.com/krakenjs/xcomponent) to
 
 ### Useful starting points
 
-- [Component definition](./src/login/component.jsx)
+- [Component definition](./src/fsxc/component.jsx)
 - [Demo in iframe mode](./demo/iframe/index.htm)
 - [Demo in popup mode](./demo/popup/index.htm)
-- [Component test](./test/tests/login.js)
+- [Component test](./test/tests/fsxc.js)
 
 Quick Start
 -----------
@@ -40,11 +40,11 @@ npm run demo
 
 #### Deploying
 
-- Host your bundled xcomponent script somewhere, e.g. `https://mysite.com/login.xcomponent.js`
-- Set up a public url for your component, e.g. `https://mysite.com/login`
-- Make sure the `login.xcomponent.js` is included in the login page, and using `window.xprops`
+- Host your bundled xcomponent script somewhere, e.g. `https://mysite.com/fsxc.wizard.js`
+- Set up a public url for your component, e.g. `https://mysite.com/fsxc`
+- Make sure the `fsxc.wizard.js` is included in the login page, and using `window.xprops`
 
-Now other sites can include `https://mysite.com/login.xcomponent.js` on their pages, and render your component!
+Now other sites can include `https://mysite.com/fsxc.wizard.js` on their pages, and render your component!
 
 #### Tests
 
@@ -89,8 +89,8 @@ Notes
 
 - `webpack.config.js` is set up to build both `iframe` and `popup` versions of your component. Normally this will be overkill and you'll just want to pick one. The reason there's an example of both is, the popup rendering code adds more to the bundle size, so cutting this out can streamline your bundle if you only need iframe support.
 
-- The karma tests use a mock for the component window (i.e. everything displayed in the popup window or iframe window). This can be seen [here](./test/windows/login). When writing tests which need to consume `window.xprops` and call callbacks like `window.xprops.onLogin()`, you'll need to do that here.
+- The karma tests use a mock for the component window (i.e. everything displayed in the popup window or iframe window). This can be seen [here](./test/windows/wizard). When writing tests which need to consume `window.xprops` and call callbacks like `window.xprops.onLogin()`, you'll need to do that here.
 
 - This module imports from `xcomponent/src` rather than `xcomponent/dist`, allowing your build to take advantage of tree-shaking, flow-types, etc. from `xcomponent` and all of its dependencies. That means that various babel plugins etc. that are required by `xcomponent` and its dependencies are included in this module. If this isn't to your liking, you're free to switch to `xcomponent/dist`, but be warned that you will lose out on some benefits this way. It will reduce the build time though.
 
-- This module is forked from [grumbler](https://github.com/krakenjs/grumbler), which gives a solid (but opinionated) default setup for front-end javascript libraries, including webpack, karma, babel, flowtype, etc. You're free to switch out any of these technologies, but the existing setup is likely to give the best compatibility especially given the previous note around importing from `xcomponent/src`.
+- This module is forked from [xcomponent-demo](https://github.com/krakenjs/xcomponent-demo), which gives a solid (but opinionated) default setup for front-end javascript libraries, including webpack, karma, babel, flowtype, etc. You're free to switch out any of these technologies, but the existing setup is likely to give the best compatibility especially given the previous note around importing from `xcomponent/src`.

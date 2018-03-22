@@ -3,18 +3,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/4.0.2/bootstrap-material-design.css" />
     <link rel="stylesheet" href="./index.css" />
 
-    <script src="../../dist/xcomponent-demo.frame.js"></script>
+    <script src="../../dist/wizard.frame.js"></script>
 </head>
 
 <body>
 
-    <h3>Log in</h3>
+    <h3>Wizard</h3>
 
     <!-- Container for our xcomponent to render into -->
 
     <div id="container"></div>
 
-    <!-- Container to display the result of the login call -->
+    <!-- Container to display the result of the wizard call -->
 
     <div id="result"></div>
 
@@ -22,7 +22,7 @@
 
         // Render the component and pass down props to the iframe
 
-        xclogin.LoginXComponent.render({
+        wizard.FSXC.render({
 
             env: 'demo',
 

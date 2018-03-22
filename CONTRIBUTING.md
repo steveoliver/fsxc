@@ -1,4 +1,4 @@
-# Contributing to xcomponent-demo
+# Contributing to fsxc
 
 We are always looking for ways to make our modules better. Adding features and fixing bugs allows everyone who depends
 on this code to create better, more stable applications.
@@ -9,13 +9,13 @@ your changes into our code. Ideas and other comments are also welcome.
 1. Create your own [fork](https://help.github.com/articles/fork-a-repo) of this [repository](../../fork).
 ```bash
 # Clone it
-$ git clone git@github.com:krakenjs/xcomponent-demo.git
+$ git clone git@github.com:condurremedia/fsxc.git
 
 # Change directory
-$ cd xcomponent-demo
+$ cd fsxc
 
 # Add the upstream repo
-$ git remote add upstream git://github.com/krakenjs/xcomponent-demo.git
+$ git remote add upstream git://github.com/condurremedia/fsxc.git
 
 # Get the latest upstream changes
 $ git pull upstream
@@ -44,4 +44,4 @@ $ npm run-script cover
 
 If you have any questions about contributing, please feel free to contact us by posting your questions on GitHub.
 
-Copyright 2016, MyCompany under [the Apache 2.0 license](LICENSE.txt).
+Copyright 2018, Condurre Media under [the Apache 2.0 license](LICENSE.txt).

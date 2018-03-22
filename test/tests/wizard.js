@@ -1,6 +1,6 @@
 /* @flow */
 
-import { LoginXComponent } from '../../src';
+import { FSXC } from '../../src';
 
 describe('button cases', () => {
 
@@ -8,7 +8,7 @@ describe('button cases', () => {
 
         let email = 'foo@bar.com';
 
-        LoginXComponent.render({
+        FSXC.render({
 
             env: 'test',
 

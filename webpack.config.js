@@ -8,8 +8,8 @@ import webpack from 'webpack';
 import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 import CircularDependencyPlugin from 'circular-dependency-plugin';
 
-const FILE_NAME = 'xcomponent-demo';
-const MODULE_NAME = 'xclogin';
+const FILE_NAME = 'wizard';
+const MODULE_NAME = 'wizard';
 
 const DEFAULT_VARS = {
     __TEST__:                           false,

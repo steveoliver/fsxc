@@ -3,16 +3,16 @@
 
 import { create } from 'xcomponent/src';
 
-export let LoginXComponent = create({
+export let FSXC = create({
 
-    tag: 'login-xcomponent',
+    tag: 'fs-wizard',
 
     defaultEnv: 'demo',
 
     url: {
-        demo:       './login.htm',
-        test:       '/base/test/windows/login/index.htm',
-        production: 'https://my-site.com/login'
+        demo:       './wizard.htm',
+        test:       '/base/test/windows/wizard/index.htm',
+        production: 'https://my-site.com/wizard'
     },
 
     domain: {
