@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FSXC</title>
+    <meta charset="utf-8"/>
+    <script src="../../dist/wizard.frame.js"></script>
+</head>
+
+<body>
+    <form>
+        <input id="email" type="text" />
+        <input id="password" type="password" />
+        <button id="login">Log in</button>
+    </form>
+
+    <script>
+      var email  = document.querySelector('#email');
+      var pass   = document.querySelector('#password');
+      var button = document.querySelector('#login');
+
+      if (window.xprops.prefilledEmail) {
+        email.value = window.xprops.prefilledEmail;
+      }
+
+      button.addEventListener('click', function() {
+        var payload = { email: email.value, password: pass.value };
+        // jQuery.post('/api/login', payload, function() {
+          window.xprops.onLogin(email.value);
+        // });
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FSXC Integration</title>
+    <meta charset="utf-8"/>
+    <script src="https://steveoliver.github.io/fsxc/dist/wizard.frame.js"></script>
+</head>
+
+<body>
+    <div id="fs-xcomponent"></div>
+    <script>
+      wizard.FSXC.render({
+        url: 'https://steveoliver.github.io/fsxc/demo/custom/fsxc.iframe.html',
+        prefilledEmail: 'foo@bar.com',
+        onLogin: function(email) {
+          console.log('User logged in with email:', email);
+        },
+        onError: function(error) {
+          console.log(error);
+        }
+      }, '#fs-xcomponent');
+    </script>
+</body>
+</html>
